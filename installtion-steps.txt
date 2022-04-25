@@ -42,7 +42,7 @@ ingress-nginx-controller-54d8b558d4-qgl8h   1/1     Running     0          46s
 
 # Create Let's Encrypt Issuer for our cluster
 
-kubectl apply -f cert-issuer-nginx-ingress.yaml
+kubectl apply -f cert-issuer.yaml
 
 # check the issuer
 kubectl describe clusterissuer letsencrypt-cluster-issuer
@@ -83,3 +83,5 @@ ingress-nginx-controller-admission   ClusterIP      10.0.218.123   <none>       
 3. Go to Configuration
 4. add the DNS name as "helloworld"
 5. Save & run the app https://helloworldz.eastus.cloudapp.azure.com
+
+Deploy the other two services and as we have the ingress with the respective path we can perform the path based routing.
