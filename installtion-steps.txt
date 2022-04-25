@@ -77,7 +77,9 @@ ingress-nginx-controller             LoadBalancer   10.0.127.192   20.81.112.9  
 ingress-nginx-controller-admission   ClusterIP      10.0.218.123   <none>        443/TCP                      120m
 
 #Find the same public ip adress (EXTERNAL-IP) from resource group created automatically by the same cluster
-1. Open Public IP Address
-2. Go to Configuration
-3. add the DNS name as "helloworldz"
-4. Save & run the app https://helloworldz.eastus.cloudapp.azure.com
+
+1. In Azure go to the RG and under this we can see all the resource created.
+2. Open Public IP Address
+3. Go to Configuration
+4. add the DNS name as "helloworld"
+5. Save & run the app https://helloworldz.eastus.cloudapp.azure.com
