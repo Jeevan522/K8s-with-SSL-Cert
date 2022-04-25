@@ -1,3 +1,8 @@
+A new name space 'spike' is create and all the pods and services will be available in this NS.
+
+We cannot have the CERTIFICATE RESOURCE in the newly created NS, this will not allows to get the SSL. 
+This resource should be in DEFAULT NS only.
+
 In the ingress file we have the path based routing and for this an ingress annotation is required to get the path based routing results.
 
 Annotation: nginx.ingress.kubernetes.io/rewrite-target: /
