@@ -1,0 +1,5 @@
+In the ingress file we have the path based routing and for this an ingress annotation is required to get the path based routing results.
+
+Annotation: nginx.ingress.kubernetes.io/rewrite-target: /
+
+We have 3 different services and added the path accordingly to the Ingress.
