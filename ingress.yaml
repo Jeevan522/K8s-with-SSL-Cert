@@ -1,0 +1,40 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    #nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: hello
+  namespace: aks
+spec:
+  tls:
+  - hosts:
+    - helloworld.eastasia.cloudapp.azure.com
+    secretName: example-app-tls
+  rules:
+  - host: helloworld.eastasia.cloudapp.azure.com
+    http:
+      paths: 
+      - path: / 
+        pathType: Prefix
+        backend:
+          service: 
+            name: hello-svc
+            port: 
+              number: 82
+      - path: /hello
+        pathType: Prefix
+        backend:
+          service:
+            name: aks-helloworld-two
+            port:
+              number: 83
+      - path: /hi
+        pathType: Prefix
+        backend:
+          service:
+            name: my-service
+            port:
+              number: 84
