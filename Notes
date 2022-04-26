@@ -8,3 +8,5 @@ In the ingress file we have the path based routing and for this an ingress annot
 Annotation: nginx.ingress.kubernetes.io/rewrite-target: /
 
 We have 3 different services and added the path accordingly to the Ingress.
+
+An AKS doc has the info related to the Ingress-Nginx controller, AGW and Helm. Refer this for additional info.
